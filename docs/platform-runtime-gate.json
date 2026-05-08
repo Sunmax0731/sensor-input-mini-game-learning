@@ -1,0 +1,11 @@
+{
+  "product": "sensor-input-mini-game-learning",
+  "title": "センサー入力ミニゲーム教材",
+  "domain": "IoT",
+  "ideaNo": 16,
+  "platformType": "iot-simulator-mock",
+  "expectedPublicTarget": "GitHub Release / GitHub Pages",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}

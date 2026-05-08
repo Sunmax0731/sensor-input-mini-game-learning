@@ -1,17 +1,17 @@
 # 仕様
 
-対象: センサー入力ミニゲーム教材 (Rank 61, IoT No.16)
+- 名称: センサー入力ミニゲーム教材
+- Repo: sensor-input-mini-game-learning
+- Closed alpha platform: sensor simulator / mock device / Web dashboard
+- 主な公開先: GitHub Release / GitHub Pages
 
-| 入力 | 用途 |
-| deviceId | センサー入力ミニゲーム教材 の評価、表示、レポートに必要 |
-| sensorType | センサー入力ミニゲーム教材 の評価、表示、レポートに必要 |
-| sampleRate | センサー入力ミニゲーム教材 の評価、表示、レポートに必要 |
-| calibrationProfile | センサー入力ミニゲーム教材 の評価、表示、レポートに必要 |
+## 入力
 
-## 出力
+- `sensorType`
+- `reading`
+- `playerAction`
+- `lessonMode`
 
-- `dist/validation-result.json`
-- `dist/web-smoke-result.json`
-- `docs/qcds-strict-metrics.json`
-- `docs/qcds-regression-baseline.json`
-- `dist/sensor-input-mini-game-learning-docs.zip`
+## 主要機能
+
+代表シナリオ評価、Web表示、CLI評価、docs / QCDS / release evidence 生成。

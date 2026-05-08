@@ -1,20 +1,16 @@
 # 要件定義
 
-対象: センサー入力ミニゲーム教材 (Rank 61, IoT No.16)
+## 対象
+
+| 61 | P3 | 51 | IoT | 16 | センサー入力ミニゲーム教材 | sensor-input-mini-game-learning | GitHub Release / GitHub Pages | IoT教材はセンサー実機や配線に依存し、入力値の揺れや欠落を安全に試しにくい。 |
 
 ## 目的
 
-M5Stackの傾き、ボタン、ジャイロをブラウザゲームや教材に接続する。
+仮想センサー値をミニゲーム入力へ変換し、実機なしでもノイズ、欠落、反応の扱いを学べる教材。
 
-## 課題
+## 必須要件
 
-センサー実験が値の表示だけで終わりやすい。
-
-## 要件
-
-- 必須入力 `deviceId`、`sensorType`、`sampleRate`、`calibrationProfile` を検証する。
-- happy-path / missing-required / warning / mixed-batch を代表シナリオとして保持する。
-- CLI、静的Web UI、自動テスト、docs ZIP、release evidence を同一repoで完結させる。
-- 正式docsはNON PICKUP行、ZIP metadata、ドメインdocsを根拠に正常な日本語で再構成する。
-
-実機なしで検証できる simulator / mock device / CLI / Web dashboard / sample telemetry を境界にし、security/privacy とLAN安全性を整理します。
+- 代表シナリオ4種を自動検証する。
+- simulator、mock device、sample telemetry、Web dashboard、security/privacy の安全境界を必須とする。
+- 文字化けを検出し、正式成果物へ残さない。
+- QCDSの10段階スケールを機械検証する。

@@ -9,6 +9,7 @@
   ],
   "expectedValidationResult": "pass",
   "expectedWebSmokeResult": "pass",
+  "expectedQcdsMinimum": "A-",
   "manualTestStatus": "not-executed",
   "releaseAssetContract": [
     "dist/sensor-input-mini-game-learning-docs.zip",

@@ -44,6 +44,7 @@
       }
     ]
   },
+  "platformRuntimeGate": "sensor simulator / mock device / Web dashboard",
   "generatedArtifacts": [
     "dist/validation-result.json",
     "dist/web-smoke-result.json",

@@ -1,20 +1,18 @@
 {
   "product": "sensor-input-mini-game-learning",
-  "records": [
+  "actuatorPolicy": "dry-run-only",
+  "samples": [
     {
-      "deviceId": "m5stack-core2-lab",
-      "sensorType": "gyro",
-      "sampleRate": 20,
-      "calibrationProfile": "desk-demo",
-      "accepted": true
+      "sensorType": "accelerometer",
+      "reading": 72,
+      "playerAction": "jump",
+      "lessonMode": "basic"
     },
     {
-      "deviceId": "m5stack-core2-lab",
-      "sensorType": "button",
-      "sampleRate": 2,
-      "calibrationProfile": "slow-classroom",
-      "accepted": true,
-      "warning": true
+      "sensorType": "light",
+      "reading": "noisy-low",
+      "playerAction": "hold",
+      "lessonMode": "calibration"
     }
   ]
 }

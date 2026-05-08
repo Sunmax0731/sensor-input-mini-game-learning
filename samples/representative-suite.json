@@ -5,12 +5,12 @@
     {
       "id": "happy-path",
       "type": "happy-path",
-      "title": "ジャイロ迷路の通常処理",
+      "title": "センサー入力ミニゲーム教材の通常フロー",
       "inputs": {
-        "deviceId": "m5stack-core2-lab",
-        "sensorType": "gyro",
-        "sampleRate": 20,
-        "calibrationProfile": "desk-demo"
+        "sensorType": "accelerometer",
+        "reading": 72,
+        "playerAction": "jump",
+        "lessonMode": "basic"
       },
       "expected": {
         "status": "pass",
@@ -23,10 +23,10 @@
       "type": "missing-required",
       "title": "sensorType不足時の停止",
       "inputs": {
-        "deviceId": "m5stack-core2-lab",
-        "sensorType": "",
-        "sampleRate": 20,
-        "calibrationProfile": "desk-demo"
+        "sensorType": "accelerometer",
+        "reading": "",
+        "playerAction": "jump",
+        "lessonMode": "basic"
       },
       "expected": {
         "status": "error",
@@ -37,12 +37,12 @@
     {
       "id": "warning",
       "type": "warning",
-      "title": "ボタン反射の注意喚起",
+      "title": "ノイズ混入時の注意喚起",
       "inputs": {
-        "deviceId": "m5stack-core2-lab",
-        "sensorType": "button",
-        "sampleRate": 2,
-        "calibrationProfile": "slow-classroom"
+        "sensorType": "light",
+        "reading": "noisy-low",
+        "playerAction": "hold",
+        "lessonMode": "calibration"
       },
       "flags": [
         "needsReview"
@@ -56,25 +56,25 @@
     {
       "id": "mixed-batch",
       "type": "mixed-batch",
-      "title": "傾きターゲットを含む混在バッチ",
+      "title": "正常・不足・警告を含む混在バッチ",
       "items": [
         {
-          "deviceId": "m5stack-core2-lab",
-          "sensorType": "gyro",
-          "sampleRate": 20,
-          "calibrationProfile": "desk-demo"
+          "sensorType": "accelerometer",
+          "reading": 72,
+          "playerAction": "jump",
+          "lessonMode": "basic"
         },
         {
-          "deviceId": "m5stack-core2-lab",
-          "sensorType": "",
-          "sampleRate": 20,
-          "calibrationProfile": "desk-demo"
+          "sensorType": "accelerometer",
+          "reading": "",
+          "playerAction": "jump",
+          "lessonMode": "basic"
         },
         {
-          "deviceId": "m5stack-core2-lab",
-          "sensorType": "button",
-          "sampleRate": 2,
-          "calibrationProfile": "slow-classroom"
+          "sensorType": "light",
+          "reading": "noisy-low",
+          "playerAction": "hold",
+          "lessonMode": "calibration"
         }
       ],
       "expected": {

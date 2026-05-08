@@ -1,0 +1,20 @@
+{
+  "product": "sensor-input-mini-game-learning",
+  "records": [
+    {
+      "deviceId": "m5stack-core2-lab",
+      "sensorType": "gyro",
+      "sampleRate": 20,
+      "calibrationProfile": "desk-demo",
+      "accepted": true
+    },
+    {
+      "deviceId": "m5stack-core2-lab",
+      "sensorType": "button",
+      "sampleRate": 2,
+      "calibrationProfile": "slow-classroom",
+      "accepted": true,
+      "warning": true
+    }
+  ]
+}

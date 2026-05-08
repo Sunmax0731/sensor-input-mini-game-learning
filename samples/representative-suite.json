@@ -1,0 +1,87 @@
+{
+  "product": "sensor-input-mini-game-learning",
+  "rank": 61,
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "type": "happy-path",
+      "title": "ジャイロ迷路の通常処理",
+      "inputs": {
+        "deviceId": "m5stack-core2-lab",
+        "sensorType": "gyro",
+        "sampleRate": 20,
+        "calibrationProfile": "desk-demo"
+      },
+      "expected": {
+        "status": "pass",
+        "accepted": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "type": "missing-required",
+      "title": "sensorType不足時の停止",
+      "inputs": {
+        "deviceId": "m5stack-core2-lab",
+        "sensorType": "",
+        "sampleRate": 20,
+        "calibrationProfile": "desk-demo"
+      },
+      "expected": {
+        "status": "error",
+        "accepted": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "warning",
+      "type": "warning",
+      "title": "ボタン反射の注意喚起",
+      "inputs": {
+        "deviceId": "m5stack-core2-lab",
+        "sensorType": "button",
+        "sampleRate": 2,
+        "calibrationProfile": "slow-classroom"
+      },
+      "flags": [
+        "needsReview"
+      ],
+      "expected": {
+        "status": "warning",
+        "accepted": 1,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "type": "mixed-batch",
+      "title": "傾きターゲットを含む混在バッチ",
+      "items": [
+        {
+          "deviceId": "m5stack-core2-lab",
+          "sensorType": "gyro",
+          "sampleRate": 20,
+          "calibrationProfile": "desk-demo"
+        },
+        {
+          "deviceId": "m5stack-core2-lab",
+          "sensorType": "",
+          "sampleRate": 20,
+          "calibrationProfile": "desk-demo"
+        },
+        {
+          "deviceId": "m5stack-core2-lab",
+          "sensorType": "button",
+          "sampleRate": 2,
+          "calibrationProfile": "slow-classroom"
+        }
+      ],
+      "expected": {
+        "status": "warning",
+        "accepted": 2,
+        "warnings": 2
+      }
+    }
+  ]
+}

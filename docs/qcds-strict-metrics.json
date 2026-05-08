@@ -27,18 +27,10 @@
   "manualTestStatus": "manual-test-not-executed-by-codex",
   "manualTestCapApplied": true,
   "platformRuntimeGate": {
-    "product": "sensor-input-mini-game-learning",
-    "platformType": "iot-simulator-mock",
-    "pass": true,
-    "method": "runtime-gate",
-    "manualTest": "not-run-by-codex",
-    "matchedPatterns": [
-      "simulator",
-      "mock",
-      "telemetry",
-      "device-adapter",
-      "host-adapter"
-    ]
+    "scope": "sensor simulator / mock device / Web dashboard",
+    "webSmoke": "dist/web-smoke-result.json",
+    "result": "pass",
+    "method": "chrome-headless-file-screenshot"
   },
   "evidence": {
     "representativeSuite": "samples/representative-suite.json",
@@ -47,17 +39,5 @@
     "releaseChecklist": "docs/release-checklist.md",
     "releaseEvidence": "docs/release-evidence.json"
   },
-  "belowAMinus": [],
-  "gradeScale": [
-    "S+",
-    "S-",
-    "A+",
-    "A-",
-    "B+",
-    "B-",
-    "C+",
-    "C-",
-    "D+",
-    "D-"
-  ]
+  "belowAMinus": []
 }
